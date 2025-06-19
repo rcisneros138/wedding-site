@@ -8,6 +8,7 @@ A wedding website built with Next.js and Tailwind CSS, designed to be hosted on 
 - **Styling**: Tailwind CSS
 - **Deployment**: Netlify (static export)
 - **Package Manager**: npm
+- **Version Control**: Git with GitHub repository
 
 ## Project Structure
 ```
@@ -48,6 +49,42 @@ For Netlify deployment, the project uses static export:
 - **Add component**: Create in `/src/components/ComponentName.tsx`
 - **Styling**: Use Tailwind CSS classes
 - **Images**: Place in `/public/` and reference with `/image.jpg`
+
+## Version Control & GitHub Workflow
+- **Repository**: https://github.com/rcisneros138/wedding-site
+- **Branch Strategy**: 
+  - `main` - Production-ready code
+  - Create feature branches for significant changes
+
+### Git Workflow
+1. **Before starting work**:
+   ```bash
+   git pull origin main
+   ```
+
+2. **For major features**:
+   ```bash
+   git checkout -b feature/feature-name
+   # Make changes
+   git add .
+   git commit -m "Descriptive commit message"
+   git push origin feature/feature-name
+   # Create pull request on GitHub
+   ```
+
+3. **For minor changes**:
+   ```bash
+   # Make changes
+   git add .
+   git commit -m "Descriptive commit message"
+   git push origin main
+   ```
+
+4. **Commit best practices**:
+   - Write clear, descriptive commit messages
+   - Commit frequently with logical changes
+   - Always commit major changes to GitHub
+   - Include the type of change in commit messages (e.g., "feat:", "fix:", "docs:")
 
 ## Wedding Site Features to Consider
 - Hero section with names and date
