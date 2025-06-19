@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --wedding-pink: #C7ACBE;
+  --wedding-brown: #8C3112;
+  --wedding-green: #526754;
+  --wedding-black: #1E1E1E;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: var(--wedding-pink);
+  --color-foreground: var(--wedding-black);
+  --font-display: var(--font-playfair-display);
+  --font-body: var(--font-montserrat);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--wedding-pink);
+  color: var(--wedding-black);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
+.scalloped-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.scalloped-shape {
+  background-color: var(--wedding-brown);
+  border-radius: 50% 50% 50% 50% / 10% 10% 10% 10%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: var(--wedding-pink);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 640px) {
+  .scalloped-shape {
+    border-radius: 40% 40% 40% 40% / 8% 8% 8% 8%;
+    padding: 1.5rem;
+  }
 }
